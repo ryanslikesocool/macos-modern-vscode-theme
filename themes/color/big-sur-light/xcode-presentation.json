@@ -27,7 +27,7 @@
         "editor.findRangeHighlightBackground": "#b4b4b44d",
         "editor.foreground": "#000000",
         "editor.lineHighlightBackground": "#eeeeee",
-        "editor.selectionBackground": "#b5d5ff",
+        "editor.selectionBackground": "#C7DBFF",
         "editorCursor.foreground": "#000000",
         "editorGroup.border": "#e1e2e2",
         "editorGroup.dropBackground": "#0369d922",
@@ -135,14 +135,7 @@
             }
         },
         {
-            "name": "Built-in constant",
-            "scope": "constant.language",
-            "settings": {
-                "foreground": "#5C2699"
-            }
-        },
-        {
-            "name": "User-defined constant",
+            "name": "User-Defined Constant",
             "scope": "constant.other",
             "settings": {
                 "foreground": "#3B7F89"
@@ -161,6 +154,7 @@
 		{
 			"name": "Operator",
 			"scope": [
+				"keyword.operator",
 				"keyword.operator.arithmetic",
 				"keyword.operator.assignment",
 				"keyword.operator.logical"
@@ -173,10 +167,11 @@
         {
             "name": "Keyword",
             "scope": [
-				"storage.modifier",
 				"keyword",
 				"keyword.operator.new",
-				"storage.type"
+				"storage.type",
+				"storage.modifier",
+				"constant.language",
 			],
             "settings": {
                 "foreground": "#B40062CC",
@@ -184,61 +179,17 @@
             }
         },
         {
-            "name": "Class name",
+            "name": "Class Name",
             "scope": [
 				"entity.name.type",
-				"entity.name.class"
+				"entity.name.class",
 			],
             "settings": {
-                "foreground": "#004975"
+                "foreground": "#284B4F"
             }
         },
         {
-            "name": "Markup bold",
-            "scope": [
-                "markup.bold",
-                "markdown.bold",
-            ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": "#434B54"
-            }
-        },
-        {
-            "name": "Markup heading",
-            "scope": [
-                "markup.heading",
-                "markdown.heading",
-            ],
-            "settings": {
-                "fontStyle": "",
-                "foreground": "#434B54"
-            }
-        },
-        {
-            "name": "Markup italic",
-            "scope": [
-                "markup.italic",
-                "markdown.italic",
-            ],
-            "settings": {
-                "fontStyle": "italic",
-                "foreground": "#434B54"
-            }
-        },
-        {
-            "name": "Markup quote",
-            "scope": [
-                "markup.quote",
-                "markdown.quote",
-            ],
-            "settings": {
-                "fontStyle": "",
-                "foreground": "#434B54"
-            }
-        },
-        {
-            "name": "Function name",
+            "name": "Function Name",
             "scope": [
 				"entity.name.function",
 				"entity.name.method"
@@ -248,40 +199,21 @@
 			}
         },
         {
-            "name": "Function argument",
-            "scope": "variable.parameter",
-            "settings": {}
-        },
-        {
-            "name": "Tag name",
-            "scope": "entity.name.tag",
-            "settings": {
-                "foreground": "#790EAD"
-            }
-        },
-        {
-            "name": "Tag attribute",
-            "scope": "entity.other.attribute-name",
-            "settings": {
-                "foreground": "#450084"
-            }
-        },
-        {
-            "name": "Library function",
+            "name": "Library Function",
             "scope": "support.function",
             "settings": {
                 "foreground": "#5C2699"
             }
         },
         {
-            "name": "Library constant",
+            "name": "Library Constant",
             "scope": "support.constant",
             "settings": {
                 "foreground": "#5C2699"
             }
         },
         {
-            "name": "Library class/type",
+            "name": "Library Class / Type",
             "scope": [
                 "support.type",
                 "support.class",
@@ -292,18 +224,71 @@
             }
         },
         {
-            "name": "Library variable",
+            "name": "Library Variable",
             "scope": "support.other.variable",
             "settings": {
                 "foreground": "#5C2699"
             }
         },
-        {
-            "name": "Invalid",
-            "scope": "invalid",
-            "settings": {}
+		{
+            "name": "Markup Bold",
+            "scope": [
+                "markup.bold",
+                "markdown.bold",
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#434B54"
+            }
         },
         {
+            "name": "Markup Heading",
+            "scope": [
+                "markup.heading",
+                "markdown.heading",
+            ],
+            "settings": {
+                "fontStyle": "",
+                "foreground": "#434B54"
+            }
+        },
+        {
+            "name": "Markup Italic",
+            "scope": [
+                "markup.italic",
+                "markdown.italic",
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#434B54"
+            }
+        },
+        {
+            "name": "Markup Quote",
+            "scope": [
+                "markup.quote",
+                "markdown.quote",
+            ],
+            "settings": {
+                "fontStyle": "",
+                "foreground": "#434B54"
+            }
+        },
+		{
+            "name": "Tag Name",
+            "scope": "entity.name.tag",
+            "settings": {
+                "foreground": "#790EAD"
+            }
+        },
+        {
+            "name": "Tag Attribute",
+            "scope": "entity.other.attribute-name",
+            "settings": {
+                "foreground": "#450084"
+            }
+        },
+		{
             "scope": "token.info-token",
             "settings": {
                 "foreground": "#316bcd"
